@@ -1,9 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
+metadata:
+  name: guestbook
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    server: {{ .Values.spec.destination.server }}
     namespace: argocd
+    server: {{ .Values.spec.destination.server }}
   project: default
   source:
     path: guestbook
