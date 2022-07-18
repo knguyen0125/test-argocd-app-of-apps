@@ -3,6 +3,7 @@ kind: Application
 spec:
   destination:
     server: {{ .Values.spec.destination.server }}
+    namespace: argocd
   project: default
   source:
     path: guestbook
