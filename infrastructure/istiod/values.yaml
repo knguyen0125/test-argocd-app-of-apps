@@ -1,1 +1,3 @@
-istiod: {}
+istiod:
+  pilot:
+    replicaCount: 3
