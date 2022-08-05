@@ -9,3 +9,15 @@ stringData:
   name: istio
   url: https://istio-release.storage.googleapis.com/charts
   type: helm
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: argo-helm-repo-bitnami
+  namespace: argo-cd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  name: bitnami
+  url: https://charts.bitnami.com/bitnami
+  type: helm
