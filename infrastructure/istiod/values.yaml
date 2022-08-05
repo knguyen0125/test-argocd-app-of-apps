@@ -1,3 +1,4 @@
 istiod:
   pilot:
+    autoscaleMin: 3
     replicaCount: 3
